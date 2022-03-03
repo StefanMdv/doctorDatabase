@@ -1,0 +1,50 @@
+<div class="content">
+
+
+    <div class="search">
+        <div class="input-fields-container">
+            <input placeholder="Fachgebiet, Erkrankung, Name" type="text">
+            <input placeholder="Ort, PLZ, Stadtteil, Straße" type="text">
+            <select name="" id="">
+            <input type="date">
+            <option value="tel">Telefonisch/Online buchbar</option>
+            <option value="online">Nur online buchbar</option>
+        </select>
+        </div>
+        <button><mat-icon>search</mat-icon>Suchen</button>
+
+    </div>
+    <div class="alldoctors">
+        <div class="doctor" *ngFor="let doctor of doctors">
+            <div class="img">
+                <img src="https://sani-saiti.developerakademie.net/doktorDatabase/{{doctor.img}}" alt="" srcset="">
+            </div>
+
+            <div class="details">
+                <h3>{{doctor.title}} {{doctor.first_name}} {{doctor.last_name}}</h3>
+                <span *ngFor="let specialty of doctor.specialities"> {{ specialty }} </span>
+                <p>{{doctor.street}}</p>
+                <p>{{doctor.zipcode}} {{doctor.city}}</p>
+
+                Öffnungszeiten:
+                <br>
+                <br> Montag : {{doctor.opening_hours.monday}}
+                <br> Dienstag : {{doctor.opening_hours.tuesday}}
+                <br> Mittwoch : {{doctor.opening_hours.thursday}}
+                <br> Donnerstag : {{doctor.opening_hours.wednesday}}
+                <br> Freitag : {{doctor.opening_hours.friday}}
+                <br> Samstag : {{doctor.opening_hours.saturday}}
+                <br> Sonntag : {{doctor.opening_hours.sunday}}
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+</div>

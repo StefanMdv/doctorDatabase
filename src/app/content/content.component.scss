@@ -1,0 +1,54 @@
+.content {
+    height: 100vh;
+}
+
+.search {
+    padding: 16px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+    button {
+        background-color: rgb(138, 210, 35);
+        height: 50px;
+        width: 100px;
+        border-radius: 8px;
+        border: none;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px
+    }
+}
+
+.input-fields-container {
+    border: 0.5px solid gray;
+    border-radius: 8px;
+    padding: 8px;
+    margin-right: 16px;
+    background-color: white;
+    input {
+        width: 200px;
+        padding: 8px 16px;
+        border: none;
+        border-right: 1px solid rgb(230, 230, 230) !important;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+select {
+    padding: 8px 16px;
+    border: none;
+    color: rgb(52, 65, 76);
+    &:focus {
+        outline: none;
+    }
+}
+
+.alldoctors {
+    padding: 80px 48px;
+}
