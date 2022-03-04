@@ -10,6 +10,6 @@ export class DataService {
 
   getDoctors(){
     return this.http.get('https://sani-saiti.developerakademie.net/doktorDatabase/get_doctors.php');
-
+    
   }
 }

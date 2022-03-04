@@ -1,0 +1,18 @@
+.content {
+    margin-top: 20px;
+}
+
+.img {
+    display: flex;
+    img {
+        height: 300px;
+        width: 200px;
+        border-radius: 100%;
+        object-fit: cover;
+        transition: all 125ms ease-in-out;
+    }
+}
+
+.nameSpecial {
+    padding-left: 20px;
+}

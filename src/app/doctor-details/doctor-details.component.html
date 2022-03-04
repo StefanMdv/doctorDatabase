@@ -1,1 +1,30 @@
-<p>doctor-details works!</p>
+<div class="content">
+    <div class="doctor" *ngIf="currentDoctor">
+        <div class="img">
+            <img #image src="https://sani-saiti.developerakademie.net/doktorDatabase/{{currentDoctor.img}}" alt="" srcset="">
+            <div class="nameSpecial">
+                <h1>{{currentDoctor.title}} {{currentDoctor.first_name}} {{currentDoctor.last_name}}</h1>
+                <span *ngFor="let specialty of currentDoctor.specialities"> {{ specialty }} </span>
+            </div>
+        </div>
+
+        <div class="details">
+
+
+            <p>{{currentDoctor.street}}</p>
+            <p>{{currentDoctor.zipcode}} {{currentDoctor.city}}</p>
+
+            Öffnungszeiten:
+            <br>
+            <br> Montag : {{currentDoctor.opening_hours.monday}}
+            <br> Dienstag : {{currentDoctor.opening_hours.tuesday}}
+            <br> Mittwoch : {{currentDoctor.opening_hours.thursday}}
+            <br> Donnerstag : {{currentDoctor.opening_hours.wednesday}}
+            <br> Freitag : {{currentDoctor.opening_hours.friday}}
+            <br> Samstag : {{currentDoctor.opening_hours.saturday}}
+            <br> Sonntag : {{currentDoctor.opening_hours.sunday}}
+
+
+        </div>
+    </div>
+</div>
